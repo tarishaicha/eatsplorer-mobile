@@ -1,16 +1,27 @@
 import * as React from "react";
-import { View, Text, TouchableOpacity, TextInput, ScrollView } from "react-native";
-import Background from "../../components/Background";
+import { View, Text, TouchableOpacity, TextInput, ScrollView, Image } from "react-native";
+import Background from "../components/Background";
 import { Ionicons } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons'; 
+import { AntDesign } from '@expo/vector-icons';
+
+
+import FoodSelectionCircle from '../components/Box/FoodSelection';
 
 export default function Explore({ navigation }) {
   return (
     <Background>
     <ScrollView>
       <View className=" justify-center pt-4 pl-6">
-        <Text className="text-black text-left font-inter text-xs font-light">Lokasi Kamu belum fix</Text>
-        <Text className="text-black text-left font-inter text-lg font-semibold">[location name]</Text>
+        <TouchableOpacity>
+          <View className="flex flex-row">
+            <Text className="text-black text-left font-inter text-xs font-normal">Your Location</Text>
+            <View className ="mt-[2px] mx-1">
+              <AntDesign name="down" size={16} color="black"/>
+            </View>
+          </View>
+        </TouchableOpacity>
+        <Text className="text-black text-left font-inter text-lg font-semibold">location name</Text>
       </View>
       <TouchableOpacity
         onPress={() => navigation.navigate("Bookmark")}
@@ -22,33 +33,44 @@ export default function Explore({ navigation }) {
           placeholderTextColor="#8b91a3"
           editable={false} // Membuat TextInput tidak dapat diedit
         />
+
       </TouchableOpacity>
-       <View className="flex flex-row">
-          <View className="flex-1 m-2">
-            <TouchableOpacity className="items-center p-4 rounded-lg bg-[#FFF] shadow-xl" style={{ height: 75, width: 75 }}>
-              <Ionicons name="location" size={24} color="black" />
-              <Text className="text-center text-[10px] font-Inter font-light mt-1">Dekat</Text>
-            </TouchableOpacity>
-          </View>
-          <View className="flex-1 m-2">
-            <TouchableOpacity className="items-center p-4 rounded-lg bg-[#FFF] shadow-xl" style={{ height: 75, width: 75 }}>
-              <Ionicons name="ios-shuffle-outline" size={24} color="black" />
-              <Text className="text-center text-[10px] font-Inter font-light mt-1">Random</Text>
-            </TouchableOpacity>
-         </View>
-        <View className="flex-1 m-2">
-          <TouchableOpacity className="items-center p-4 rounded-lg bg-[#FFF] shadow-xl" style={{ height: 75, width: 75 }}>
-            <Entypo name="new" size={24} color="black" />
-            <Text className="text-center text-[10px] font-Inter font-light mt-1 ">Baru</Text>
-          </TouchableOpacity>
-       </View>
-       <View className="flex-1 m-2">
-          <TouchableOpacity className="items-center p-4 rounded-lg bg-[#FFF] shadow-xl" style={{ height: 75, width: 75 }}>
-            <Entypo name="ticket" size={24} color="black" />
-            <Text className="text-center text-[10px] font-Inter font-light mt-1">Kupon</Text>
-         </TouchableOpacity>
-       </View>
-      </View>
+      <ScrollView horizontal={true}>
+        <View className="flex flex-row">
+          <FoodSelectionCircle
+            imageSource={require('../../assets/fried_rice.jpg')}
+            buttonText="Rice"
+          />
+          <FoodSelectionCircle
+            imageSource={require('../../assets/sushi.jpg')}
+            buttonText="Japanese"
+          />
+          <FoodSelectionCircle
+            imageSource={require('../../assets/fast_food.jpg')}
+            buttonText="Fast Food"
+          />
+          <FoodSelectionCircle
+            imageSource={require('../../assets/bakery.jpg')}
+            buttonText="Bakery"
+          />
+          <FoodSelectionCircle
+            imageSource={require('../../assets/bakso.jpg')}
+            buttonText="Bakso"
+          />
+          <FoodSelectionCircle
+            imageSource={require('../../assets/sweets.jpg')}
+            buttonText="Sweets"
+          />
+          <FoodSelectionCircle
+            imageSource={require('../../assets/beverages.jpg')}
+            buttonText="Beverages"
+          />
+          <FoodSelectionCircle
+            imageSource={require('../../assets/chicken_and_duck.jpg')}
+            buttonText="Chicken"
+          />
+        </View>
+      </ScrollView>
       <View className="flex-row items-center justify-between py-2 px-4">
         <Text className="text-black text-left font-inter text-base font-bold">Top Rated</Text>
         <TouchableOpacity>

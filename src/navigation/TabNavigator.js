@@ -1,5 +1,5 @@
 import * as React from "react";
-import { NavigationContainer} from "@react-navigation/native";
+// import { NavigationContainer} from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { View } from 'react-native';
@@ -7,9 +7,9 @@ import { useIsFocused } from "@react-navigation/native";
 
 
 // Screens
-import Explore from "./screens/Explore";
-import Profile from "./screens/Profile";
-import Bookmark from "./screens/Bookmark";
+import Explore from "../screens/Explore";
+import Profile from "../screens/Profile";
+import Bookmark from "../screens/Bookmark";
 
 // Screen names
 const bookmarkFitur = "Bookmark";
@@ -42,7 +42,6 @@ function ExploreTab({ size }) {
 
 function MainContainer() {
   return (
-    <NavigationContainer>
       <Tab.Navigator
         initialRouteName={exploreFitur}
         screenOptions={({ route }) => ({
@@ -84,7 +83,6 @@ function MainContainer() {
         <Tab.Screen name={exploreFitur} component={Explore} />
         <Tab.Screen name={profileFitur} component={Profile} />
       </Tab.Navigator>
-    </NavigationContainer>
   );
 }
 

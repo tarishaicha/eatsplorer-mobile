@@ -1,16 +1,16 @@
 import * as React from "react";
 import { View, Text } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import Background from "../../components/Background";
+import Background from "../components/Background";
 
-export default function Profile({ navigation }) {
+export default function Search({ navigation }) {
   return (
     <Background>
       <Text
-        className="text font-bold"
-        onPress={() => navigation.navigate("Profile")}
+        className="text-green-500 font-bold"
+        onPress={() => navigation.navigate("Search")}
       >
-        Profile
+        Search
       </Text>
       <StatusBar style="auto" />
     </Background>
