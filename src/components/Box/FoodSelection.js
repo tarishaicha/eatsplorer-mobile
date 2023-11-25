@@ -5,7 +5,7 @@ const FoodSelectionCircle = ({ imageSource, buttonText }) => {
   return (
     <View className="flex-1 m-2">
       <View className="flex flex-col">
-        <TouchableOpacity style={{ borderRadius: 9999, overflow: 'hidden' }}>
+        <TouchableOpacity className="rounded-full overflow-hidden">
           <Image
             source={imageSource}
             className="w-24 h-24"
