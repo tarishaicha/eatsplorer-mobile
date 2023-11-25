@@ -12,7 +12,7 @@ import Profile from "./screens/Profile";
 import Bookmark from "./screens/Bookmark";
 
 // Screen names
-const bookmarkFitur = "Home";
+const bookmarkFitur = "Bookmark";
 const exploreFitur = " ";
 const profileFitur = "Profile";
 
@@ -28,7 +28,7 @@ function ExploreTab({ size }) {
         width: 60,
         height: 60,
         borderRadius: 30,
-        backgroundColor: isFocused ? "#1E2857" : "#d3d3d3",
+        backgroundColor: isFocused ? "#FEDB71" : "grey",
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: -10
@@ -51,7 +51,7 @@ function MainContainer() {
             let rn = route.name;
 
             if (rn === bookmarkFitur) {
-              iconName = focused ? "heart" : "heart-outline";
+              iconName = focused ? "bookmark" : "bookmark-outline";
             } else if (rn === exploreFitur) {
               // iconName = focused ? "ios-globe" : "ios-globe-outline";
               // return <CourseTab focused={focused} size={size} />;
@@ -64,14 +64,14 @@ function MainContainer() {
               <Ionicons
                 name={iconName}
                 size={size}
-                color={focused ? "#1E2857" : "grey"}
+                color={focused ? "#FEDB71" : "grey"}
               />
             );
           },
-          tabBarActiveTintColor: "#1E2857",
+          tabBarActiveTintColor: "#FEDB71",
           tabBarInactiveTintColor: "grey",
           tabBarLabelStyle: {
-            color: "#1E2857", // Set the text color for the tab label
+            color: "#FEDB71", // Set the text color for the tab label
           },
           headerShown: false,
           tabBarStyle: {
