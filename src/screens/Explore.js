@@ -92,6 +92,7 @@ export default function Explore({ navigation }) {
               rating={4.9}
               totalReviews={2395}
               backgroundColor="bg-yellow text-black"
+              onPress={() => navigation.navigate("restaurantpage")}
             />
             <ExploreTopRated
               imageSource={require('../../assets/fast_food.jpg')}
