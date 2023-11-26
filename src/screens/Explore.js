@@ -77,7 +77,7 @@ export default function Explore({ navigation }) {
 
       <View className="flex-row items-center justify-between py-2 px-4">
         <Text className="text-black text-left font-inter text-base font-bold">Top Rated</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("seemoretoprated")}>
           <Text className="text-gray font-normal text-sm">See More</Text>
         </TouchableOpacity>
       </View>
