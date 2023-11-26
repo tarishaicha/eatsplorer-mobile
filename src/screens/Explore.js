@@ -40,7 +40,7 @@ export default function Explore({ navigation }) {
         <View className="flex flex-row">
           <FoodSelectionCircle
             imageSource={require('../../assets/fried_rice.jpg')}
-            buttonText="Rice"
+            buttonText="Indonesian"
           />
           <FoodSelectionCircle
             imageSource={require('../../assets/sushi.jpg')}
@@ -48,27 +48,19 @@ export default function Explore({ navigation }) {
           />
           <FoodSelectionCircle
             imageSource={require('../../assets/fast_food.jpg')}
-            buttonText="Fast Food"
+            buttonText="Western"
           />
           <FoodSelectionCircle
             imageSource={require('../../assets/bakery.jpg')}
             buttonText="Bakery"
           />
           <FoodSelectionCircle
-            imageSource={require('../../assets/bakso.jpg')}
-            buttonText="Bakso"
+            imageSource={require('../../assets/beverages.jpg')}
+            buttonText="Cafe"
           />
           <FoodSelectionCircle
             imageSource={require('../../assets/sweets.jpg')}
-            buttonText="Sweets"
-          />
-          <FoodSelectionCircle
-            imageSource={require('../../assets/beverages.jpg')}
-            buttonText="Beverages"
-          />
-          <FoodSelectionCircle
-            imageSource={require('../../assets/chicken_and_duck.jpg')}
-            buttonText="Chicken"
+            buttonText="Dessert"
           />
         </View>
       </ScrollView>
@@ -128,7 +120,7 @@ export default function Explore({ navigation }) {
       </ScrollView>
       <View className="flex-row items-center justify-between py-2 px-4">
         <Text className="text-black text-left font-inter text-base font-bold">Near Me</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("seemorenearme")}>
           <Text className="text-gray font-normal text-sm">See More</Text>
         </TouchableOpacity>
       </View>

@@ -4,6 +4,7 @@ import Search from "../screens/Search";
 import Restaurantpage from "../screens/Restaurantpage";
 import Maps from "../screens/Maps";
 import SeeMoreTopRated from "../screens/SeeMoreTopRated";
+import SeeMoreNearMe from "../screens/SeeMoreNearMe";
 
 const RootStack = createNativeStackNavigator();
 
@@ -38,6 +39,12 @@ function StackNavigator() {
                 <RootStack.Screen
                     name="seemoretoprated"
                     component={SeeMoreTopRated}
+                />
+            </RootStack.Group>
+            <RootStack.Group screenOptions={{ headerShown: false }}>
+                <RootStack.Screen
+                    name="seemorenearme"
+                    component={SeeMoreNearMe}
                 />
             </RootStack.Group>
         </RootStack.Navigator>

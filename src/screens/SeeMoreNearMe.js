@@ -6,7 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 import SeeMoreBox from "../components/Box/SeeMoreBox";
 
-export default function SeeMoreTopRated({ navigation }) {
+export default function SeeMoreNearMe({ navigation }) {
   return (
     <Background>
     <ScrollView>
@@ -14,7 +14,7 @@ export default function SeeMoreTopRated({ navigation }) {
         <TouchableOpacity className="content-start mt-1" onPress={() => navigation.navigate("main")}>
           <Ionicons name="arrow-back" size={25} color="black" />
         </TouchableOpacity>
-        <Text className="text-black text-center font-inter text-lg font-semibold mx-4 ">Top Rated</Text>
+        <Text className="text-black text-center font-inter text-lg font-semibold mx-4 ">Near Me</Text>
       </View>
       <View className="flex flexcol py-2 items-center justify-center">
         <SeeMoreBox
