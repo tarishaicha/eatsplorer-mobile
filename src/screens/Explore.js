@@ -13,7 +13,7 @@ export default function Explore({ navigation }) {
     <Background>
     <ScrollView>
       <View className=" justify-center pt-4 pl-6">
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("location")}>
           <View className="flex flex-row">
             <Text className="text-black text-left font-inter text-xs font-normal">Your Location</Text>
             <View className ="mt-[2px] mx-1">
