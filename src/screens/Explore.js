@@ -24,7 +24,7 @@ export default function Explore({ navigation }) {
         <Text className="text-black text-left font-inter text-lg font-semibold">location name</Text>
       </View>
       <TouchableOpacity
-        onPress={() => navigation.navigate("Bookmark")}
+        onPress={() => navigation.navigate("search")}
         className = "flex-row items-center p-3 rounded-lg  m-6 bg-white border border-[#8b91a3]">
         <Ionicons name="search-outline" size={22} color="black" />
         <TextInput
@@ -80,7 +80,7 @@ export default function Explore({ navigation }) {
       <ScrollView horizontal={true}>
         <View className="flex flex-row py-2 px-4">
           <View className="flex-1 m-2">
-            <TouchableOpacity className="items-center p-4 rounded-lg bg-[#FFF] shadow-xl h-52 w-60 gap-x-1 ">
+            <TouchableOpacity className="items-center p-4 rounded-lg bg-[#FFF] shadow-xl h-52 w-60 gap-x-1 " onPress={() => navigation.navigate("restaurantpage")}>
             </TouchableOpacity>
           </View>
           <View className="flex-1 m-2">
