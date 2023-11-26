@@ -2,18 +2,19 @@ import * as React from "react";
 import { View, Text, TouchableOpacity, TextInput, ScrollView, Image } from "react-native";
 import Background from "../components/Background";
 import { Ionicons } from '@expo/vector-icons';
-import { Entypo } from '@expo/vector-icons'; 
+// import { Entypo } from '@expo/vector-icons'; 
 import { AntDesign } from '@expo/vector-icons';
 
 
 import FoodSelectionCircle from '../components/Box/FoodSelection';
+import ExploreTopRated from "../components/Box/ExploreTopRated";
 
 export default function Explore({ navigation }) {
   return (
     <Background>
     <ScrollView>
       <View className=" justify-center pt-4 pl-6">
-        <TouchableOpacity onPress={() => navigation.navigate("location")}>
+        <TouchableOpacity onPress={() => navigation.navigate("maps")}>
           <View className="flex flex-row">
             <Text className="text-black text-left font-inter text-xs font-normal">Your Location</Text>
             <View className ="mt-[2px] mx-1">
@@ -71,6 +72,9 @@ export default function Explore({ navigation }) {
           />
         </View>
       </ScrollView>
+
+      {/* Top Rated */}
+
       <View className="flex-row items-center justify-between py-2 px-4">
         <Text className="text-black text-left font-inter text-base font-bold">Top Rated</Text>
         <TouchableOpacity>
@@ -78,33 +82,100 @@ export default function Explore({ navigation }) {
         </TouchableOpacity>
       </View>
       <ScrollView horizontal={true}>
-        <View className="flex flex-row py-2 px-4">
-          <View className="flex-1 m-2">
-            <TouchableOpacity className="items-center p-4 rounded-lg bg-[#FFF] shadow-xl h-52 w-60 gap-x-1 " onPress={() => navigation.navigate("restaurantpage")}>
-            </TouchableOpacity>
+        <View className="flex flex-row py-2 px-4 ">
+          <View className="flex flexcol py-2">
+            <ExploreTopRated
+              imageSource={require('../../assets/fast_food.jpg')}
+              distance={5} 
+              title="Burger King"
+              price={88.5}
+              rating={4.9}
+              totalReviews={2395}
+              backgroundColor="bg-yellow text-black"
+            />
+            <ExploreTopRated
+              imageSource={require('../../assets/fast_food.jpg')}
+              distance={15} 
+              title="Blenger Burger"
+              price={88.5}
+              rating={4.9}
+              totalReviews={2395}
+              backgroundColor="bg-yellow text-black"
+            />
           </View>
-          <View className="flex-1 m-2">
-            <TouchableOpacity className="items-center p-4 rounded-lg bg-[#FFF] shadow-xl h-52 w-60 gap-x-1">
-            </TouchableOpacity>
-          </View>
+          <View className="flex flexcol py-2">
+            <ExploreTopRated
+              imageSource={require('../../assets/sushi.jpg')}
+              distance={5} 
+              title="Sushi Tei"
+              price={88.5}
+              rating={4.9}
+              totalReviews={2395}
+              backgroundColor="bg-yellow text-black"
+            />
+            <ExploreTopRated
+              imageSource={require('../../assets/fast_food.jpg')}
+              distance={25} 
+              title="Kopi Anak Monopole"
+              price={88.5}
+              rating={4.9}
+              totalReviews={2395}
+              backgroundColor="bg-yellow text-black"
+            />
+            </View>
         </View>
       </ScrollView>
       <View className="flex-row items-center justify-between py-2 px-4">
-        <Text className="text-black text-left font-inter text-base font-bold">Sedang Promo</Text>
+        <Text className="text-black text-left font-inter text-base font-bold">Near Me</Text>
         <TouchableOpacity>
           <Text className="text-gray font-normal text-sm">See More</Text>
         </TouchableOpacity>
       </View>
+
+      {/* near me */}
+
       <ScrollView horizontal={true}>
-        <View className="flex flex-row py-2 px-4">
-          <View className="flex-1 m-2">
-            <TouchableOpacity className="items-center p-4 rounded-lg bg-[#FFF] shadow-xl h-52 w-60 gap-x-1 ">
-            </TouchableOpacity>
+        <View className="flex flex-row py-2 px-4 ">
+          <View className="flex flexcol py-2">
+            <ExploreTopRated
+              imageSource={require('../../assets/fast_food.jpg')}
+              distance={5} 
+              title="Burger King"
+              price={88.5}
+              rating={4.9}
+              totalReviews={2395}
+              backgroundColor="bg-yellow text-black"
+            />
+            <ExploreTopRated
+              imageSource={require('../../assets/fast_food.jpg')}
+              distance={15} 
+              title="Blenger Burger"
+              price={88.5}
+              rating={4.9}
+              totalReviews={2395}
+              backgroundColor="bg-yellow text-black"
+            />
           </View>
-          <View className="flex-1 m-2">
-            <TouchableOpacity className="items-center p-4 rounded-lg bg-[#FFF] shadow-xl h-52 w-60 gap-x-1">
-            </TouchableOpacity>
-          </View>
+          <View className="flex flexcol py-2">
+            <ExploreTopRated
+              imageSource={require('../../assets/sushi.jpg')}
+              distance={5} 
+              title="Sushi Tei"
+              price={88.5}
+              rating={4.9}
+              totalReviews={2395}
+              backgroundColor="bg-yellow text-black"
+            />
+            <ExploreTopRated
+              imageSource={require('../../assets/fast_food.jpg')}
+              distance={25} 
+              title="Kopi Anak Monopole"
+              price={88.5}
+              rating={4.9}
+              totalReviews={2395}
+              backgroundColor="bg-yellow text-black"
+            />
+            </View>
         </View>
       </ScrollView>
       </ScrollView>

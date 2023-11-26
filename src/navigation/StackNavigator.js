@@ -2,7 +2,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import TabNavigator from "./TabNavigator";
 import Search from "../screens/Search";
 import Restaurantpage from "../screens/Restaurantpage";
-import Location from "../screens/Location";
+import Maps from "../screens/Maps";
 
 const RootStack = createNativeStackNavigator();
 
@@ -29,8 +29,8 @@ function StackNavigator() {
             </RootStack.Group>
             <RootStack.Group screenOptions={{ headerShown: false }}>
                 <RootStack.Screen
-                    name="location"
-                    component={Location}
+                    name="maps"
+                    component={Maps}
                 />
             </RootStack.Group>
         </RootStack.Navigator>
