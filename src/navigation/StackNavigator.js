@@ -1,9 +1,11 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import TabNavigator from "./TabNavigator";
+
 import Search from "../screens/Search";
 import Restaurantpage from "../screens/Restaurantpage";
 import Maps from "../screens/Maps";
+
 import SeeMoreTopRated from "../screens/SeeMoreTopRated";
 import SeeMoreNearMe from "../screens/SeeMoreNearMe";
 
