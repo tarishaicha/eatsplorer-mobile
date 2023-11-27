@@ -38,27 +38,31 @@ export default function Explore({ navigation }) {
       </TouchableOpacity>
       <ScrollView horizontal={true}>
         <View className="flex flex-row">
-          <FoodSelectionCircle
+          <FoodSelectionCircle onPress={() => navigation.navigate("indonesianpage")}
             imageSource={require('../../assets/fried_rice.jpg')}
             buttonText="Indonesian"
           />
-          <FoodSelectionCircle
+          <FoodSelectionCircle onPress={() => navigation.navigate("japanesepage")}
             imageSource={require('../../assets/sushi.jpg')}
             buttonText="Japanese"
           />
-          <FoodSelectionCircle
+          <FoodSelectionCircle onPress={() => navigation.navigate("westernpage")}
             imageSource={require('../../assets/fast_food.jpg')}
             buttonText="Western"
           />
-          <FoodSelectionCircle
+          <FoodSelectionCircle onPress={() => navigation.navigate("koreanpage")}
+            imageSource={require('../../assets/Korean.jpg')}
+            buttonText="Korean"
+          />
+          <FoodSelectionCircle onPress={() => navigation.navigate("bakerypage")}
             imageSource={require('../../assets/bakery.jpg')}
             buttonText="Bakery"
           />
-          <FoodSelectionCircle
+          <FoodSelectionCircle onPress={() => navigation.navigate("cafepage")}
             imageSource={require('../../assets/beverages.jpg')}
             buttonText="Cafe"
           />
-          <FoodSelectionCircle
+          <FoodSelectionCircle onPress={() => navigation.navigate("dessertpage")}
             imageSource={require('../../assets/sweets.jpg')}
             buttonText="Dessert"
           />
