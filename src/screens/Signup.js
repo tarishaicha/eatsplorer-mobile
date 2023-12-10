@@ -6,6 +6,7 @@ import {
   Image,
   TouchableOpacity,
   TextInput,
+  KeyboardAvoidingView
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
@@ -14,6 +15,7 @@ import { Entypo } from "@expo/vector-icons";
 export default function Signup({ navigation }) {
   return (
     // <LoginBackground>
+    <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
     <View>
       <ScrollView>
         <View className="relative bg-[#FEDB71]">
@@ -30,7 +32,7 @@ export default function Signup({ navigation }) {
             </TouchableOpacity>
           </View>
 
-          <View className="flex-row justify-center top-24">
+          <View className="flex-row justify-center top-16">
             <Image
               source={require("../../assets/signup2.png")}
               style={{ width: 350, height: 350 }}
@@ -40,8 +42,9 @@ export default function Signup({ navigation }) {
           {/* coba */}
           <View
             style={{ borderTopLeftRadius: 50, borderTopRightRadius: 50 }}
-            className="flex-1 bg-white px-8 pt-8 mt-32 ">
+            className="flex-1 bg-white px-8 pt-8 mt-20 ">
             {/* kolom email dkk */}
+           
             <View className="flex flex-col">
               <View className="form space-y-2">
                 <Text className="text-gray-700 ml-4">Email Address</Text>
@@ -57,6 +60,7 @@ export default function Signup({ navigation }) {
                   placeholder="password"
                   value="test12345"
                 />
+               
 
                 {/* button login */}
                 <View className="mt-4">
@@ -85,6 +89,7 @@ export default function Signup({ navigation }) {
         </View>
       </ScrollView>
     </View>
+   </KeyboardAvoidingView>
     // </LoginBackground>
   );
 }

@@ -6,6 +6,7 @@ import Background from "../components/Background";
 export default function Bookmark({ navigation }) {
   return (
     <Background>
+      <View className="flex-col items-center justify-center top-56"> 
       <Image
         source={require("../../assets/heart_break.png")}
         style={{ width: 100, height: 100 }} // Adjust the width and height as needed
@@ -21,6 +22,7 @@ export default function Bookmark({ navigation }) {
         and add them to your bookmark!
       </Text>
       <StatusBar style="auto" />
+      </View>
     </Background>
   );
 }
