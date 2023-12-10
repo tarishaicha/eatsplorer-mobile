@@ -17,6 +17,15 @@ import Bakerypage from "../screens/Bakerypage";
 import Cafepage from "../screens/Cafepage";
 import Dessertpage from "../screens/Dessertpage";
 
+import ReviewSeemore from "../screens/ReviewSeemore";
+import Review2 from "../screens/Review2";
+
+import Getstarted from "../screens/Getstarted";
+import Login from "../screens/Login";
+import Signup from "../screens/Signup";
+
+import Isibookmark from "../screens/Isibookmark";
+
 const RootStack = createNativeStackNavigator();
 
 function StackNavigator() {
@@ -98,6 +107,42 @@ function StackNavigator() {
                 <RootStack.Screen
                     name="dessertpage"
                     component={Dessertpage}
+                />
+            </RootStack.Group>
+            <RootStack.Group screenOptions={{ headerShown: false }}>
+                <RootStack.Screen
+                    name="review"
+                    component={ReviewSeemore}
+                />
+            </RootStack.Group>
+            <RootStack.Group screenOptions={{ headerShown: false }}>
+                <RootStack.Screen
+                    name="review2"
+                    component={Review2}
+                />
+            </RootStack.Group>
+            <RootStack.Group screenOptions={{ headerShown: false }}>
+                <RootStack.Screen
+                    name="start"
+                    component={Getstarted}
+                />
+            </RootStack.Group>
+            <RootStack.Group screenOptions={{ headerShown: false }}>
+                <RootStack.Screen
+                    name="login"
+                    component={Login}
+                />
+            </RootStack.Group>
+            <RootStack.Group screenOptions={{ headerShown: false }}>
+                <RootStack.Screen
+                    name="signup"
+                    component={Signup}
+                />
+            </RootStack.Group>
+            <RootStack.Group screenOptions={{ headerShown: false }}>
+                <RootStack.Screen
+                    name="isibookmark"
+                    component={Isibookmark}
                 />
             </RootStack.Group>
         </RootStack.Navigator>
