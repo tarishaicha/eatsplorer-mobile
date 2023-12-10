@@ -16,7 +16,6 @@ export default function Search({ navigation }) {
         </TouchableOpacity>
         <Text className="text-black text-center font-inter text-lg font-semibold mx-4 ">Search</Text>
       </View>
-      <ScrollView>
       <TouchableOpacity className = "flex-row items-center justify-center p-3 rounded-lg  m-6 bg-white border border-[#8b91a3]">
         <Ionicons name="search-outline" size={22} color="black" />
         <TextInput
@@ -27,6 +26,8 @@ export default function Search({ navigation }) {
         />
         <Feather name="x" size={24} color="black" />
      </TouchableOpacity>
+     <ScrollView>
+     <View className="flex flex-col py-2 items-center justify-center">
       <SearchBox
           imageSource={require('../../assets/fast_food.jpg')}
           distance={5} 
@@ -47,8 +48,27 @@ export default function Search({ navigation }) {
           backgroundColor="bg-yellow text-black"
           onPress={() => navigation.navigate("restaurantpage")}
         />
-      
-      <StatusBar style="auto" />
+        <SearchBox
+          imageSource={require('../../assets/fast_food.jpg')}
+          distance={5} 
+          title="Burger King"
+          price={88.5}
+          rating={4.9}
+          totalReviews={2395}
+          backgroundColor="bg-yellow text-black"
+          onPress={() => navigation.navigate("restaurantpage")}
+        />
+        <SearchBox
+          imageSource={require('../../assets/fast_food.jpg')}
+          distance={5} 
+          title="Burger King"
+          price={88.5}
+          rating={4.9}
+          totalReviews={2395}
+          backgroundColor="bg-yellow text-black"
+          onPress={() => navigation.navigate("restaurantpage")}
+        />
+      </View>
       </ScrollView>
     </Background>
   );

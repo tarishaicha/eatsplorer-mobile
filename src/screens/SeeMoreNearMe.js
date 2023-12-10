@@ -16,7 +16,7 @@ export default function SeeMoreNearMe({ navigation }) {
         </TouchableOpacity>
         <Text className="text-black text-center font-inter text-lg font-semibold mx-4 ">Near Me</Text>
       </View>
-      <View className="flex flexcol py-2 items-center justify-center">
+      <View className="flex flex-col py-2 items-center justify-center">
         <SeeMoreBox
           imageSource={require('../../assets/fast_food.jpg')}
           distance={5} 

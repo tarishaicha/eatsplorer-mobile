@@ -4,9 +4,9 @@ import { Entypo } from '@expo/vector-icons';
 
 const SearchBox = ({ imageSource, distance, title,  rating, totalReviews, onPress, backgroundColor }) => {
   return (
-    <View className="flex-1 m-2">
+    <View className="flex-1 m-2 ">
     <TouchableOpacity className="items-center rounded-lg bg-white shadow-xl h-40 w-full p-3 gap-x-2 " onPress={onPress}>
-      <View className="flex flex-row w-full">
+      <View className="flex flex-row w-full item-start justify-start">
         <Image source={imageSource} className="w-32 h-32 rounded-lg my-1" />
         <View className ="flex flex-col ml-4">
         <Text className={`px-1 text-xs font-semibold text-center rounded-md w-1/2 my-1 ${backgroundColor}`}>{`${distance} km`}</Text>
